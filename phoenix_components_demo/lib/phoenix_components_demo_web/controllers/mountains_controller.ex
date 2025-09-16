@@ -5,7 +5,8 @@ defmodule PhoenixComponentsDemoWeb.MountainsController do
   @assigns %{
     image: "https://cdn.pixabay.com/photo/2016/05/24/16/48/mountains-1412683_1280.png",
     image_alt: "Mountains",
-    description: "Mountains are not stadiums where I satisfy my ambition to achieve, they are the cathedrals where I practice my religion",
+    description:
+      "Mountains are not stadiums where I satisfy my ambition to achieve, they are the cathedrals where I practice my religion. - Anatoli Boukreev",
     description_title: "Hymn to mountains",
     actions: [%{name: "love", href: "#"}, %{name: "dislike", href: "#"}]
   }
