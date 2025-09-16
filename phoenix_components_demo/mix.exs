@@ -51,7 +51,7 @@ defmodule PhoenixComponentsDemo.MixProject do
       {:phoenix_live_dashboard, "~> 0.8.3"},
       {:esbuild, "~> 0.10", runtime: Mix.env() == :dev},
       {:tailwind, "~> 0.3", runtime: Mix.env() == :dev},
-      {:heroicons,
+      {:heroicons, "~> 0.5",
        github: "tailwindlabs/heroicons",
        tag: "v2.2.0",
        sparse: "optimized",
@@ -82,7 +82,11 @@ defmodule PhoenixComponentsDemo.MixProject do
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
       "assets.setup": ["tailwind.install --if-missing", "esbuild.install --if-missing"],
-      "assets.build": ["compile", "tailwind phoenix_components_demo", "esbuild phoenix_components_demo"],
+      "assets.build": [
+        "compile",
+        "tailwind phoenix_components_demo",
+        "esbuild phoenix_components_demo"
+      ],
       "assets.deploy": [
         "tailwind phoenix_components_demo --minify",
         "esbuild phoenix_components_demo --minify",
