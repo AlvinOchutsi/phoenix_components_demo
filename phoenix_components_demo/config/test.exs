@@ -9,6 +9,7 @@ config :phoenix_components_demo, PhoenixComponentsDemo.Repo,
   username: "postgres",
   password: "postgres",
   hostname: "localhost",
+  port: 5432,
   database: "phoenix_components_demo_test#{System.get_env("MIX_TEST_PARTITION")}",
   pool: Ecto.Adapters.SQL.Sandbox,
   pool_size: System.schedulers_online() * 2
